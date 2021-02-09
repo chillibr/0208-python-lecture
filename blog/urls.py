@@ -12,5 +12,7 @@ urlpatterns = [
     path('archive/<int:year>/<str:month>/', views.PostMAV.as_view(), name='post_month_archive'),
     path('archive/<int:year>/<str:month>/<int:day>/', views.PostDAV.as_view(), name='post_day_archive'),
     path('archive/today/', views.PostTAV.as_view(), name='post_today_archive'),
+
+    path('search/', views.SearchFormView.as_view(), name='search'),   # URLconf 추가
 ]
 
